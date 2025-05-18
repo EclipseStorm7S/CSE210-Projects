@@ -18,12 +18,12 @@ class Program
             Console.WriteLine("\n" + mainJournal.ReadJournal());
             break;
           case "3":
-            Console.WriteLine("Enter a File Name: ");
+            Console.WriteLine("Enter a File Name, or leave blank to use your most recent one: ");
             string inputFileName = Console.ReadLine();
             mainJournal.WriteToFile(inputFileName);
             break;
           case "4":
-            Console.WriteLine("Enter a File Name: ");
+            Console.WriteLine("Enter a File Name, or leave blank to use your most recent one: ");
             inputFileName = Console.ReadLine();
             mainJournal.ReadFromFile(inputFileName);
             break;

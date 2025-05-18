@@ -3,8 +3,16 @@ using System.IO;
 
 class Journal{
   List<JournalEntry> entries = new List<JournalEntry>();
+  string LatestFilename = "";
 
   public void WriteToFile(string filename){
+    if (filename == "" && LatestFilename != ""){
+      filename = LatestFilename;
+    }
+    if (filename.Substring(filename.Length - 4, 4).ToLower() != ".txt"){
+      filename += ".txt";
+    }
+    LatestFilename = filename;
     using (StreamWriter outputFile = new StreamWriter(filename))
     {
       foreach (JournalEntry entry in entries){
@@ -16,6 +24,13 @@ class Journal{
   }
 
   public void ReadFromFile(string filename){
+    if (filename == "" && LatestFilename != ""){
+      filename = LatestFilename;
+    }
+    if (filename.Substring(filename.Length - 4, 4).ToLower() != ".txt"){
+      filename += ".txt";
+    }
+    LatestFilename = filename;
     string[] lines = System.IO.File.ReadAllLines(filename);
     foreach (string line in lines)
     {
