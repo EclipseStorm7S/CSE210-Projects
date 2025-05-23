@@ -1,5 +1,11 @@
 class Circle{
   private double _radius = 1;
+  public Circle(){
+    _radius = 1;
+  }
+  public Circle(double r){
+    SetRadius(r);
+  }
   public void SetRadius(double radius){
     if (radius < 0){
       Console.WriteLine("ERROR: Circle annot have radius of zero.");

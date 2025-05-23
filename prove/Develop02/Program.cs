@@ -41,8 +41,7 @@ class Program
       int ayooo = rng.Next(0,prompts.Length);
       Console.WriteLine(prompts[ayooo]);
       string entryInput = Console.ReadLine();
-      JournalEntry newGuy = new JournalEntry();
-      newGuy.CreateEntry(DateTime.Now.ToShortDateString(),prompts[ayooo],entryInput);
+      JournalEntry newGuy = new JournalEntry(DateTime.Now.ToShortDateString(),prompts[ayooo],entryInput);
       mainJournal.AddEntry(newGuy);
     }
 

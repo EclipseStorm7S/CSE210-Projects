@@ -39,8 +39,7 @@ class Journal{
       string prompt = parts[1];
       string entryText = parts[2];
 
-      JournalEntry entry = new JournalEntry();
-      entry.CreateEntry(date, prompt, entryText);
+      JournalEntry entry = new JournalEntry(date, prompt, entryText);
       this.AddEntry(entry);
     }
   }

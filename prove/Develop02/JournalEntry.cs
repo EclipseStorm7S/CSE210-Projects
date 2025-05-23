@@ -3,7 +3,7 @@ class JournalEntry{
   string prompt = "";
   string entryText = "";
 
-  public void CreateEntry(string x,string y, string z){
+  public JournalEntry(string x,string y, string z){
     date = x;
     prompt = y;
     entryText = z;
