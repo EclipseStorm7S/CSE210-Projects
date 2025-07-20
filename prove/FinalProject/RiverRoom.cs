@@ -1,6 +1,6 @@
 class RiverRoom : WetChunk{
 
-  public RiverRoom(){
+  public RiverRoom(Vector2 inputSize) : base(inputSize){
 
   }
   protected override void PlaceLiquids(){
